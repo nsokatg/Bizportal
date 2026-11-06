@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>お気に入りポータル (24インチ最適化)</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 15px;
+            line-height: 1.5;
+        }
+
+        h1 {
+            background: #003366;
+            color: white;
+            height: 52px;
+            line-height: 52px;
+            padding: 0 12px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 0 12px 0;
+            box-sizing: border-box;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        .section h2 {
+            background: #005bac;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .link-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .card {
+            background: white;
+            padding: 4px 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 5px solid #005bac;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            background: #f0f7ff;
+            transform: translateX(5px);
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #005bac;
+            font-weight: bold;
+            font-size: 15px;
+            display: block;
+            word-break: break-all;
+        }
+
+        .url {
+            margin-top: 5px;
+            font-size: 11px;
+            color: #888;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>お気に入り</h1>
+
+    <div class="section">
+        <h2>大学関連</h2>
+        <div class="link-grid">
+            <div class="card">
+                <a href="https://chikushiuacjp.sharepoint.com/sites/ICT_bh7fxr/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FICT%5Fbh7fxr%2FShared%20Documents%2F%E5%BC%95%E3%81%8D%E7%B6%99%E3%81%8E&p=true&ga=1" target="_blank">マニュアル</a>
+            </div>
+            <div class="card">
+                <a href="https://unipa.chikushi-u.ac.jp/uprx/up/bs/bsa001/Bsa00101.xhtml" target="_blank">UNIVERSAL PASSPORT RX</a>
+            </div>
+            <div class="card">
+                <a href="https://cwuiis.chikushi-u.ac.jp/login/index.php" target="_blank">筑女ネット</a>
+            </div>
+            <div class="card">
+                <a href="http://gakuenweb-01.chikushi-u.ac.jp/gakuen/faces/rev/co/Cos00101.jsp" target="_blank">ＧＡＫＵＥＮ</a>
+            </div>
+            <div class="card">
+                <a href="http://svpr.chikushi-u.ac.jp:9191/app;jsessionid=node0m0j6rci6t6rqctpvpjdejgiv45.node0?service=page/Home" target="_blank">ＰａｐｅｒＣｕｔ</a>
+            </div>
+            <div class="card">
+                <a href="https://v-boot.chikushi-u.ac.jp/dashboard" target="_blank">V-BOOT</a>
+            </div>
+            <div class="card">
+                <a href="https://pchange.chikushi-u.ac.jp/extraconsole/adminLogin/" target="_blank">ExtraConsole</a>
+            </div>
+            <div class="card">
+                <a href="\\sv2kfs1\HOME1\staff\u-nishioka\Desktop\マイホームページ\教室予約.html" target="_blank">教室予約</a>
+            </div>
+            <div class="card">
+                <a href="https://chikushiuacjp.sharepoint.com/:x:/r/sites/ICT_bh7fxr/_layouts/15/Doc.aspx?action=edit&sourcedoc=%7Bf55cadcf-bf33-4461-9a41-4ad21af7ecbd%7D&wdExp=TEAMS-TREATMENT&web=1&TeamsCID=752b58d9-aac1-46ff-99f5-a899d4f0fe0d" target="_blank">障害記録</a>
+            </div>
+            <div class="card">
+                <a href="https://chikushiuacjp.sharepoint.com/:x:/r/sites/ICT_bh7fxr/_layouts/15/Doc.aspx?action=edit&sourcedoc=%7Bf4d251bd-a8ee-450b-be2e-653563cdd78b%7D&wdExp=TEAMS-TREATMENT&web=1&TeamsCID=c4e97742-437b-45e4-b138-fd0be4577bdf" target="_blank">教職員検索</a>
+            </div>
+            <div class="card">
+                 <a href="M:\8.課金ONOFFソフトウェア\PaperCutClient" target="_blank">プリンタ課金ＯＦＦ</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>演習室・視聴覚室</h2>
+        <div class="link-grid">
+            <div class="card">
+                <a href="\\sv2kfs1\HOME1\staff\u-nishioka\Desktop\マイホームページ\監視カメラ.html" target="_blank">監視カメラ（８教室ダッシュボード）</a>
+            </div>
+            <div class="card"><a href="http://172.16.8.221/" target="_blank">演習室1A</a></div>
+            <div class="card"><a href="http://172.16.8.222/#view" target="_blank">演習室1B</a></div>
+            <div class="card"><a href="http://172.16.9.221/" target="_blank">演習室2</a></div>
+            <div class="card"><a href="http://172.16.16.221/" target="_blank">視聴覚室1</a></div>
+            <div class="card"><a href="http://172.16.16.223/" target="_blank">視聴覚室2</a></div>
+            <div class="card"><a href="http://172.16.20.221/" target="_blank">演習室3</a></div>
+            <div class="card"><a href="http://172.16.21.221/" target="_blank">演習室4</a></div>
+            <div class="card"><a href="http://172.16.22.222/" target="_blank">演習室5</a></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>ツール・情報</h2>
+        <div class="link-grid">
+            <div class="card">
+                <a href="https://gemini.google.com/app?hl=ja" target="_blank">gemini</a>
+            </div>
+            <div class="card">
+                <a href="https://chatgpt.com/?utm_source=microsoft&utm_medium=paid_search&utm_campaign=MSFT_C_SEM_BBR_Core_CHT_BAU_ACQ_PER_MIX_ALL_APAC_JP_JA_110625&c_id=570612908&c_agid=1188574059145823&c_crid=&c_kwid=kwd-74286323802537:loc-96&c_ims=96&c_pms=243812&c_nw=o&c_dvc=c&msclkid=09b2a5f0820419cbac29cff5cc170028" target="_blank">ChatGPT</a>
+            </div>
+            <div class="card">
+                <a href="https://nsokatg.github.io/news_and_weather/index.html" target="_blank">天気とニュース</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
