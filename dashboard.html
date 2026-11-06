@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ｄａｓｈｂｏａｒｄ</title>
+    <title>Dashboard</title>
     <style>
         * {
             box-sizing: border-box;
@@ -12,10 +12,10 @@
         body {
             margin: 0;
             font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            background: #f4f6f9;
-            color: #333;
+            background: #f1f5f9;
+            color: #1e293b;
             line-height: 1.5;
-            padding: 15px;
+            padding: 10px;
         }
 
         .container {
@@ -26,26 +26,26 @@
         }
 
         header {
-            background: #003366;
+            background: #0f172a;
             color: white;
-            height: 40px;
-            line-height: 40px;
+            height: 38px;
+            line-height: 38px;
             padding: 0 12px;
-            border-radius: 8px;
-            font-size: 20px;
+            border-radius: 6px;
+            font-size: 15px;
             font-weight: bold;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 0 0 12px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 0 0 10px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
         .header-clock {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: normal;
             background: rgba(255, 255, 255, 0.15);
-            padding: 2px 10px;
+            padding: 2px 8px;
             border-radius: 4px;
         }
 
@@ -64,25 +64,25 @@
 
         select {
             padding: 0 8px;
-            border: 1px solid #ccc;
+            border: 1px solid #cbd5e1;
             border-radius: 6px;
             background: white;
             cursor: pointer;
         }
 
         button {
-            background: #005bac;
+            background: #1e3a8a;
             color: white;
             border: none;
             border-radius: 6px;
-            padding: 0 14px;
+            padding: 0 12px;
             font-weight: bold;
             cursor: pointer;
-            transition: opacity 0.2s;
+            transition: background 0.15s;
         }
 
         button:hover {
-            opacity: 0.9;
+            background: #1d4ed8;
         }
 
         /* 検索バーのスタイル */
@@ -95,7 +95,7 @@
         .search-box input {
             width: 200px;
             padding: 0 8px;
-            border: 1px solid #ccc;
+            border: 1px solid #cbd5e1;
             border-radius: 6px;
             outline: none;
         }
@@ -112,14 +112,15 @@
             background: white;
             padding: 8px 12px;
             border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-left: 5px solid #005bac;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #cbd5e1;
+            border-left: 4px solid #1e3a8a;
             font-size: 13px;
         }
 
         .box-title {
             font-size: 12px;
-            color: #666;
+            color: #64748b;
             margin-bottom: 2px;
             font-weight: bold;
         }
@@ -144,10 +145,11 @@
         .calendar-box {
             flex: 1.7;
             background: white;
-            padding: 12px;
+            padding: 10px;
             border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-left: 5px solid #005bac;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #cbd5e1;
+            border-left: 4px solid #1e3a8a;
             display: flex;
             flex-direction: column;
         }
@@ -155,10 +157,11 @@
         .todo-box {
             flex: 0.8;
             background: white;
-            padding: 12px;
+            padding: 10px;
             border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-left: 5px solid #005bac;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #cbd5e1;
+            border-left: 4px solid #1e3a8a;
             display: flex;
             flex-direction: column;
         }
@@ -171,14 +174,14 @@
         }
 
         .todo-reset-btn {
-            background: #6c757d;
+            background: #64748b;
             font-size: 11px;
             padding: 2px 8px;
             height: auto;
         }
 
         .todo-reset-btn:hover {
-            background: #5a6268;
+            background: #475569;
         }
 
         /* カレンダー表示エリア */
@@ -187,7 +190,7 @@
             height: 380px;
             overflow: hidden;
             position: relative;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #cbd5e1;
             border-radius: 4px;
             background: #fff;
         }
@@ -207,7 +210,7 @@
         }
 
         .calendar-link-row a {
-            color: #005bac;
+            color: #1d4ed8;
             text-decoration: none;
         }
 
@@ -226,7 +229,7 @@
             flex: 1;
             height: 30px;
             padding: 0 8px;
-            border: 1px solid #ccc;
+            border: 1px solid #cbd5e1;
             border-radius: 4px;
             font-size: 13px;
             outline: none;
@@ -251,16 +254,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #fdfdfd;
+            background: #f8fafc;
             padding: 6px 8px;
-            border: 1px solid #eee;
+            border: 1px solid #e2e8f0;
             border-radius: 4px;
             font-size: 13px;
         }
 
         .todo-item.completed span, .todo-item.completed a {
             text-decoration: line-through;
-            color: #888;
+            color: #94a3b8;
         }
 
         .todo-left {
@@ -286,7 +289,7 @@
         }
 
         .todo-copy-btn {
-            background: #28a745;
+            background: #059669;
             border: none;
             color: white;
             cursor: pointer;
@@ -297,13 +300,13 @@
         }
 
         .todo-copy-btn:hover {
-            background: #218838;
+            background: #047857;
         }
 
         .todo-del-btn {
             background: none;
             border: none;
-            color: #d32f2f;
+            color: #dc2626;
             cursor: pointer;
             font-size: 11px;
             padding: 2px 4px;
@@ -312,25 +315,25 @@
 
         .todo-del-btn:hover {
             text-decoration: underline;
-            opacity: 1;
         }
 
-        /* ふせんメモエリアのスタイル（2段表示） */
+        /* ふせんメモエリアのスタイル */
         .memo-section {
             background: white;
             border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #cbd5e1;
             overflow: hidden;
         }
 
         .memo-header {
-            background: #005bac;
+            background: #1e3a8a;
             color: white;
             padding: 6px 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
         }
 
@@ -347,26 +350,25 @@
         .sticky-note {
             padding: 8px 10px;
             border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             min-height: 140px;
             position: relative;
-            transition: background 0.2s, border-color 0.2s;
         }
 
         /* カラーバリエーション */
-        .note-yellow { background: #fff9c4; border-top: 4px solid #fbc02d; }
-        .note-pink   { background: #f8bbd0; border-top: 4px solid #e91e63; }
-        .note-green  { background: #c8e6c9; border-top: 4px solid #4caf50; }
-        .note-blue   { background: #bbdefb; border-top: 4px solid #2196f3; }
-        .note-purple { background: #e1bee7; border-top: 4px solid #9c27b0; }
+        .note-yellow { background: #fefce8; border-top: 4px solid #ca8a04; border: 1px solid #fef08a; border-top-width: 4px; }
+        .note-pink   { background: #fdf2f8; border-top: 4px solid #db2777; border: 1px solid #fce7f3; border-top-width: 4px; }
+        .note-green  { background: #f0fdf4; border-top: 4px solid #16a34a; border: 1px solid #dcfce7; border-top-width: 4px; }
+        .note-blue   { background: #eff6ff; border-top: 4px solid #2563eb; border: 1px solid #dbeafe; border-top-width: 4px; }
+        .note-purple { background: #faf5ff; border-top: 4px solid #9333ea; border: 1px solid #f3e8ff; border-top-width: 4px; }
 
         /* タイムスタンプ表示スタイル */
         .sticky-timestamp {
             font-size: 10px;
-            color: #666;
+            color: #64748b;
             margin-bottom: 2px;
             border-bottom: 1px dashed rgba(0,0,0,0.1);
             padding-bottom: 2px;
@@ -380,13 +382,12 @@
             resize: none;
             font-family: inherit;
             outline: none;
-            color: #333;
+            color: #1e293b;
         }
 
-        /* ふせんの文字サイズクラス */
         .text-size-small textarea { font-size: 11px; }
         .text-size-medium textarea { font-size: 13px; }
-        .text-size-large textarea { font-size: 16px; }
+        .text-size-large textarea { font-size: 15px; }
 
         .sticky-footer {
             display: flex;
@@ -423,26 +424,25 @@
             transform: scale(1.2);
         }
 
-        .dot-yellow { background: #fbc02d; }
-        .dot-pink   { background: #e91e63; }
-        .dot-green  { background: #4caf50; }
-        .dot-blue   { background: #2196f3; }
-        .dot-purple { background: #9c27b0; }
+        .dot-yellow { background: #ca8a04; }
+        .dot-pink   { background: #db2777; }
+        .dot-green  { background: #16a34a; }
+        .dot-blue   { background: #2563eb; }
+        .dot-purple { background: #9333ea; }
 
-        /* 文字サイズ切替ボタン */
         .size-btn {
-            background: rgba(0,0,0,0.1);
+            background: rgba(0,0,0,0.05);
             border: none;
             border-radius: 3px;
             font-size: 10px;
             padding: 2px 4px;
             cursor: pointer;
-            color: #333;
+            color: #334155;
             height: auto;
         }
 
         .size-btn:hover {
-            background: rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.1);
         }
 
         .action-btns {
@@ -454,7 +454,7 @@
         .delete-btn {
             background: none;
             border: none;
-            color: #d32f2f;
+            color: #dc2626;
             cursor: pointer;
             font-size: 11px;
             height: auto;
@@ -463,11 +463,10 @@
 
         .delete-btn:hover {
             text-decoration: underline;
-            opacity: 1;
         }
 
         .todo-send-btn {
-            background: #17a2b8;
+            background: #0891b2;
             color: white;
             border: none;
             border-radius: 3px;
@@ -478,11 +477,11 @@
         }
 
         .todo-send-btn:hover {
-            background: #138496;
+            background: #0e7490;
         }
 
         .keep-btn {
-            background: #f57c00;
+            background: #d97706;
             color: white;
             border: none;
             border-radius: 3px;
@@ -493,13 +492,13 @@
         }
 
         .keep-btn:hover {
-            background: #e65100;
+            background: #b45309;
         }
 
         .add-note-btn {
             background: #fff;
-            color: #005bac;
-            border: 1px dashed #005bac;
+            color: #1e3a8a;
+            border: 1px dashed #1e3a8a;
             border-radius: 4px;
             padding: 2px 8px;
             font-size: 12px;
@@ -508,7 +507,7 @@
         }
 
         .add-note-btn:hover {
-            background: #f0f7ff;
+            background: #f8fafc;
         }
     </style>
 </head>
@@ -516,7 +515,7 @@
 
     <div class="container">
         <header>
-            <span>Ｄａｓｈｂｏａｒｄ</span>
+            <span>Dashboard</span>
             <span id="headerClock" class="header-clock">読み込み中...</span>
         </header>
 
@@ -579,7 +578,7 @@
             </div>
         </div>
 
-        <!-- ふせんメモエリア (下段・2段制限) -->
+        <!-- ふせんメモエリア (下段) -->
         <div class="memo-section">
             <div class="memo-header">
                 <span>クイックメモ（ふせん）</span>
@@ -723,7 +722,7 @@
             const stepX = (width - padding * 2) / (tempSeries.length - 1 || 1);
 
             ctx.beginPath();
-            ctx.strokeStyle = "#005bac";
+            ctx.strokeStyle = "#1e3a8a";
             ctx.lineWidth = 2;
 
             tempSeries.forEach((temp, i) => {
@@ -741,7 +740,7 @@
 
                 ctx.beginPath();
                 ctx.arc(x, y, 2.5, 0, Math.PI * 2);
-                ctx.fillStyle = "#005bac";
+                ctx.fillStyle = "#1e3a8a";
                 ctx.fill();
 
                 ctx.font = "10px sans-serif";
@@ -795,15 +794,14 @@
 
                 left.appendChild(checkbox);
 
-                // urlが指定されている場合はリンク要素、指定されていない場合は通常テキストとして描画
                 if (todo.url) {
                     const linkA = document.createElement("a");
                     linkA.href = todo.url;
                     linkA.textContent = todo.text;
                     linkA.target = "_blank";
                     linkA.rel = "noopener noreferrer";
-                    linkA.style.color = "#005bac";
-                    linkA.style.fontWeight = "bold";
+                    linkA.style.color = "#1d4ed8";
+                    linkA.style.fontWeight = "600";
                     linkA.style.textDecoration = "none";
                     linkA.onmouseover = () => linkA.style.textDecoration = "underline";
                     linkA.onmouseout = () => linkA.style.textDecoration = "none";
@@ -940,7 +938,6 @@
                 const createdTime = note.createdAt || formatTimestamp(Number(note.id));
                 card.dataset.createdat = createdTime;
 
-                // タイムスタンプ表示用要素
                 const timestampEl = document.createElement("div");
                 timestampEl.className = "sticky-timestamp";
                 timestampEl.textContent = `作成: ${createdTime}`;
@@ -955,7 +952,6 @@
                 const leftGroup = document.createElement("div");
                 leftGroup.className = "footer-left-group";
 
-                // カラーパレット
                 const palette = document.createElement("div");
                 palette.className = "color-palette";
                 const colors = ["yellow", "pink", "green", "blue", "purple"];
@@ -973,7 +969,6 @@
                     palette.appendChild(dot);
                 });
 
-                // 文字サイズ切替ボタン
                 const sizeBtn = document.createElement("button");
                 sizeBtn.className = "size-btn";
                 updateSizeButtonLabel(sizeBtn, note.size || 'medium');
@@ -994,7 +989,6 @@
                 leftGroup.appendChild(palette);
                 leftGroup.appendChild(sizeBtn);
 
-                // アクションボタン
                 const actionBtns = document.createElement("div");
                 actionBtns.className = "action-btns";
 
@@ -1006,7 +1000,6 @@
                     saveNotes();
                 };
 
-                // ふせんの内容をToDoに送るボタン
                 const todoSendBtn = document.createElement("button");
                 todoSendBtn.className = "todo-send-btn";
                 todoSendBtn.textContent = "ToDoへ";
@@ -1035,7 +1028,6 @@
                 footer.appendChild(leftGroup);
                 footer.appendChild(actionBtns);
 
-                // 要素を組み立ててカードに追加
                 card.appendChild(timestampEl);
                 card.appendChild(textarea);
                 card.appendChild(footer);
@@ -1069,7 +1061,6 @@
             }
         }
 
-        // ToDo項目を指定して新しいふせんを作成する関数
         function copyTodoToNote(todoText) {
             const notes = getNotes();
             const now = Date.now();
@@ -1086,7 +1077,6 @@
             document.querySelector(".memo-section").scrollIntoView({ behavior: "smooth" });
         }
 
-        // ふせんの内容を指定して新しいToDoタスクを作成する関数
         function copyNoteToTodo(noteText) {
             const trimmed = noteText.trim();
             if (!trimmed) {
