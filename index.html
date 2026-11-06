@@ -35,7 +35,7 @@
             overflow: hidden;
         }
 
-        .dashboard-container {
+        .board-container {
             display: grid;
             grid-template-columns: minmax(260px, 30%) minmax(0, 1fr);
             gap: 12px;
@@ -165,7 +165,7 @@
 
         @media (max-width: 900px) {
             body { height: auto; min-height: 100%; overflow: auto; }
-            .dashboard-container { grid-template-columns: minmax(0, 1fr); height: auto; }
+            .board-container { grid-template-columns: minmax(0, 1fr); height: auto; }
             .left-column { overflow: visible; }
             .top-section { min-height: 360px; }
             .bottom-section { min-height: 320px; }
@@ -175,7 +175,7 @@
 </head>
 <body>
 
-    <div class="dashboard-container">
+    <div class="board-container">
         
         <!-- 左側エリア（全体割合 30%）：上下に分割 -->
         <div class="left-column">
@@ -217,7 +217,7 @@
         <!-- 右側エリア：ダッシュボード本体 -->
         <aside class="right-column">
             <div class="embed-container" style="height: 100%;">
-                <iframe src="https://nsokatg.github.io/Bizportal/dashbord.html" title="ダッシュボード"></iframe>
+                <iframe src="https://nsokatg.github.io/Bizportal/dashboard.html" title="ダッシュボード"></iframe>
             </div>
         </aside>
 
