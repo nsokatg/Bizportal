@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ｂｉｚｐｏｒｔａｌ</title>
+    <title>Bizportal</title>
     <style>
         :root {
-            --bg: #f4f7fc;
+            --bg: #f1f5f9;
             --surface: #ffffff;
-            --text: #344054;
-            --muted: #8491a5;
-            --border: #e5eaf2;
-            --blue: #5299f5;
-            --blue-soft: #e7effb;
-            --coral: #ff8c8c;
-            --yellow: #ffc857;
-            --green: #77c9a5;
-            --purple: #a98be8;
-            --shadow: 0 3px 12px rgba(50, 80, 130, 0.09);
-            --radius: 14px;
+            --text: #1e293b;
+            --muted: #64748b;
+            --border: #cbd5e1;
+            --primary: #1e3a8a;
+            --primary-light: #eff6ff;
+            --accent: #2563eb;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
         }
 
         * { box-sizing: border-box; }
@@ -41,7 +38,7 @@
         .dashboard-container {
             display: grid;
             grid-template-columns: minmax(260px, 30%) minmax(0, 1fr);
-            gap: 14px;
+            gap: 12px;
             width: 100%;
             height: 100%;
         }
@@ -49,7 +46,7 @@
         .left-column {
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 12px;
             min-height: 0;
             overflow: hidden;
         }
@@ -58,7 +55,7 @@
             display: flex;
             flex-direction: column;
             min-height: 0;
-            padding: 12px;
+            padding: 10px;
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: var(--radius);
@@ -83,28 +80,27 @@
             align-items: center;
             justify-content: space-between;
             flex-shrink: 0;
-            min-height: 38px;
-            margin-bottom: 10px;
-            padding: 0 13px;
+            min-height: 36px;
+            margin-bottom: 8px;
+            padding: 0 12px;
             color: #fff;
-            background: linear-gradient(105deg, var(--blue), #78b5ff);
-            border-radius: 10px;
-            font-size: 15px;
-            font-weight: 700;
+            background: #0f172a;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
             letter-spacing: .02em;
-            box-shadow: 0 2px 6px rgba(82, 153, 245, .18);
         }
 
-        .top-section .card-header { background: linear-gradient(105deg, var(--purple), #c0a8f4); }
-        .bottom-section .card-header { background: linear-gradient(105deg, var(--blue), #78b5ff); }
+        .top-section .card-header { background: #0f172a; }
+        .bottom-section .card-header { background: #1e3a8a; }
 
         h3 {
-            margin: 9px 0 6px;
-            padding-left: 9px;
+            margin: 8px 0 4px;
+            padding-left: 8px;
             color: var(--text);
-            border-left: 4px solid var(--coral);
-            font-size: .82rem;
-            font-weight: 700;
+            border-left: 3px solid var(--accent);
+            font-size: 12px;
+            font-weight: bold;
         }
 
         .embed-container {
@@ -114,7 +110,7 @@
             overflow: hidden;
             background: #fff;
             border: 1px solid var(--border);
-            border-radius: 10px;
+            border-radius: 6px;
         }
 
         .embed-container iframe {
@@ -131,72 +127,49 @@
             padding-right: 4px;
             overflow-y: auto;
             scrollbar-width: thin;
-            scrollbar-color: #cbd8eb transparent;
+            scrollbar-color: #cbd5e1 transparent;
         }
 
         .btn {
             display: block;
-            margin: 0 0 6px;
-            padding: 8px 11px;
-            border: 1px solid transparent;
-            border-radius: 9px;
+            margin: 0 0 5px;
+            padding: 6px 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
             text-decoration: none;
-            font-size: .82rem;
-            font-weight: 650;
+            font-size: 13px;
+            font-weight: 600;
             line-height: 1.35;
-            transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+            transition: background 0.15s;
         }
 
         .btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 3px 8px rgba(50, 80, 130, .10);
+            background: #f8fafc;
         }
 
         .btn-local {
-            margin-left: 8px;
-            color: #397bc9;
-            background: var(--blue-soft);
-            border-color: #c9defb;
+            margin-left: 0;
+            color: #1d4ed8;
+            background: var(--primary-light);
+            border-color: #bfdbfe;
         }
 
-        .btn-local:hover { background: #dceaff; }
+        .btn-local:hover { background: #dbeafe; }
 
         .btn-web {
-            color: #46556b;
-            background: #f8faff;
-            border-color: var(--border);
+            color: #334155;
+            background: #ffffff;
         }
 
-        .btn-web:nth-of-type(2n) { border-left: 4px solid var(--green); }
-        .btn-web:nth-of-type(2n+1) { border-left: 4px solid var(--yellow); }
-        .btn-web:hover { background: #eef4ff; }
+        .btn-web:hover { background: #f1f5f9; }
 
         @media (max-width: 900px) {
-            body {
-                height: auto;
-                min-height: 100%;
-                overflow: auto;
-            }
-
-            .dashboard-container {
-                grid-template-columns: minmax(0, 1fr);
-                height: auto;
-            }
-
+            body { height: auto; min-height: 100%; overflow: auto; }
+            .dashboard-container { grid-template-columns: minmax(0, 1fr); height: auto; }
             .left-column { overflow: visible; }
-
             .top-section { min-height: 360px; }
             .bottom-section { min-height: 320px; }
-
             .right-column { height: 900px; }
-        }
-
-        @media (max-width: 520px) {
-            body { padding: 7px; }
-            .dashboard-container, .left-column { gap: 10px; }
-            .card { padding: 9px; }
-            .top-section { min-height: 320px; }
-            .right-column { height: 850px; }
         }
     </style>
 </head>
@@ -210,29 +183,29 @@
             <!-- 上：ブックマーク画面 -->
             <section class="card top-section">
                 <div class="card-header">
-                    <span>Ｂｏｏｋｍａｒｋｓ</span>
+                    <span>Bookmarks</span>
                 </div>
                 <div class="embed-container" style="overflow: hidden; position: relative;">
-                    <iframe src="https://nsokatg.github.io/Bizportal/bookmark.html" title="Bookmarks" style="width: 111%; height: 111%; transform: scale(0.95); transform-origin: top left; border: none;"></iframe>
+                    <iframe src="https://nsokatg.github.io/bookmark/" title="Bookmarks" style="width: 100%; height: 100%; border: none;"></iframe>
                 </div>
             </section>
 
             <!-- 下：アプリ・ランチャーエリア -->
             <main class="card bottom-section">
                 <div class="card-header">
-                    <span>アプリ</span>
+                    <span>アプリケーション</span>
                 </div>
                 
-                <div class="link-group" style="overflow-y: auto; flex-grow: 1; padding-right: 4px;">
+                <div class="link-group">
                     <h3>ローカルアプリ</h3>
-                    <a href="myapp://" class="btn btn-local">ＧＵＩを開く</a>
+                    <a href="myapp://" class="btn btn-local">GUIを開く</a>
                     
-                    <h3>ＷＥＢアプリ</h3>
-                    <a href="https://github.com/" target="_blank" class="btn btn-web">github</a>
+                    <h3>WEBアプリ</h3>
+                    <a href="https://github.com/" target="_blank" class="btn btn-web">GitHub</a>
                     <a href="https://console.cloud.google.com/welcome?project=web-notes-508202" target="_blank" class="btn btn-web">Google Cloud</a>
                     <a href="https://drive.google.com/drive/home" target="_blank" class="btn btn-web">Google Drive</a>
-                    <a href="https://nsokatg.github.io/Prompt_Maker/index.html" target="_blank" class="btn btn-web">Prompt_Maker</a>
-                    <a href="https://nsokatg.github.io/Diary_Recorder/index.html" target="_blank" class="btn btn-web">Diary_Recorder</a>
+                    <a href="https://nsokatg.github.io/Prompt_Maker/index.html" target="_blank" class="btn btn-web">Prompt Maker</a>
+                    <a href="https://nsokatg.github.io/Diary_Recorder/index.html" target="_blank" class="btn btn-web">Diary Recorder</a>
                     <a href="https://nsokatg.github.io/GlyphAi/index.html" target="_blank" class="btn btn-web">GlyphAI</a>
                     <a href="https://nsokatg.github.io/Web_Memo/" target="_blank" class="btn btn-web">Web Memos</a>
                     <a href="https://nsokatg.github.io/Household_accounts/index.html" target="_blank" class="btn btn-web">家計簿</a>
@@ -241,10 +214,10 @@
 
         </div>
 
-        <!-- 右側エリア（残りスペース）：ダッシュボード本体 -->
+        <!-- 右側エリア：ダッシュボード本体 -->
         <aside class="right-column">
             <div class="embed-container" style="height: 100%;">
-                <iframe src="https://nsokatg.github.io/Bizportal/dashboard.html" title="ダッシュボード"></iframe>
+                <iframe src="https://nsokatg.github.io/Bizportal/dashbord.html" title="ダッシュボード"></iframe>
             </div>
         </aside>
 
