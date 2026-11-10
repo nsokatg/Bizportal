@@ -218,36 +218,36 @@
             text-decoration: underline;
         }
 
-        /* ToDoリストのスタイル */
+        /* ToDoリストのスタイル（10項目スクロールなし表示対応） */
         .todo-input-row {
             display: flex;
             gap: 6px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .todo-input-row input {
             flex: 1;
-            height: 30px;
+            height: 28px;
             padding: 0 8px;
             border: 1px solid #cbd5e1;
             border-radius: 4px;
-            font-size: 13px;
+            font-size: 12px;
             outline: none;
         }
 
         .todo-input-row button {
-            height: 30px;
+            height: 28px;
             padding: 0 10px;
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .todo-list {
             flex: 1;
-            max-height: 334px;
+            max-height: 325px;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 3px;
         }
 
         .todo-item {
@@ -255,10 +255,11 @@
             align-items: center;
             justify-content: space-between;
             background: #f8fafc;
-            padding: 6px 8px;
+            padding: 2px 6px;
             border: 1px solid #e2e8f0;
             border-radius: 4px;
-            font-size: 13px;
+            font-size: 12px;
+            min-height: 26px;
         }
 
         .todo-item.completed span, .todo-item.completed a {
@@ -269,10 +270,15 @@
         .todo-left {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             word-break: break-all;
             flex: 1;
             min-width: 0;
+        }
+
+        .todo-left input[type="checkbox"] {
+            margin: 0;
+            cursor: pointer;
         }
 
         .todo-left span, .todo-left a {
@@ -294,7 +300,7 @@
             color: white;
             cursor: pointer;
             font-size: 10px;
-            padding: 2px 5px;
+            padding: 1px 5px;
             height: auto;
             border-radius: 3px;
         }
@@ -308,8 +314,8 @@
             border: none;
             color: #dc2626;
             cursor: pointer;
-            font-size: 11px;
-            padding: 2px 4px;
+            font-size: 10px;
+            padding: 1px 3px;
             height: auto;
         }
 
@@ -568,7 +574,7 @@
                     <div class="box-title" style="margin-bottom:0;">ToDoリスト（本日のタスク）</div>
                     <button class="todo-reset-btn" onclick="resetTodos()">一括リセット</button>
                 </div>
-                <div class="todo-input-row" style="margin-top: 8px;">
+                <div class="todo-input-row" style="margin-top: 6px;">
                     <input type="text" id="todoInput" placeholder="新しいタスクを入力..." onkeypress="handleTodoKey(event)">
                     <button onclick="addTodo()">追加</button>
                 </div>
@@ -868,14 +874,14 @@
             
             const defaultTodos = [
                 { id: 0, text: "CloseupTodayの確認", url: "https://nsokatg.github.io/Personal_Learning_Hub/", completed: false },
-                { id: 1, text: "出勤打刻", completed: false },
+                { id: 1, text: "出勤打刻", url: "https://chikushiuacjp.sharepoint.com/:x:/r/sites/ICT-81/_layouts/15/Doc.aspx?action=edit&sourcedoc=%7B9c00e084-ff5b-4ab8-8ca2-2d64bb8ca5d0%7D&wdExp=TEAMS-TREATMENT&web=1&share=cQqE4ACcW_-4SoyiLWS7jKXQEgUDipo_5AmrF_WjBbsIpHddow", completed: false },
                 { id: 2, text: "2限目準備", completed: false },
                 { id: 3, text: "3限目準備", completed: false },
                 { id: 4, text: "4限目準備", completed: false },
                 { id: 5, text: "ＰＣ貸出準備", completed: false },
                 { id: 6, text: "翌日教室予約の確認", completed: false },
                 { id: 7, text: "閉室準備", completed: false },
-                { id: 8, text: "退勤打刻", completed: false },
+                { id: 8, text: "退勤打刻", url: "https://chikushiuacjp.sharepoint.com/:x:/r/sites/ICT-81/_layouts/15/Doc.aspx?action=edit&sourcedoc=%7B9c00e084-ff5b-4ab8-8ca2-2d64bb8ca5d0%7D&wdExp=TEAMS-TREATMENT&web=1&share=cQqE4ACcW_-4SoyiLWS7jKXQEgUDipo_5AmrF_WjBbsIpHddow", completed: false },
                 { id: 9, text: "Helthcheck", url: "myapp2://", completed: false }
             ];
             
